@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Navbar/Navbar";
 import Footer from "@/component/Footer/Footer";
+import AuthContext from "@/contexts/AuthContext";
 
 const roboto = Roboto({
   weight: "400",
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
         className={`${roboto.className} min-h-full flex flex-col bg-[#F8FAFC] antialiased`}
       >
         <Navbar />
-        <main className="container mx-auto px-10">{children}</main>
+        <main className="container mx-auto px-10">
+          <AuthContext>{children}</AuthContext>
+        </main>
         <Footer className="mt-10"></Footer>
       </body>
     </html>
