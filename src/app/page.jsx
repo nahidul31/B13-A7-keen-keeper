@@ -1,4 +1,8 @@
-export default function Home() {
+import FriendsCard from "@/component/FriendsCard/FriendsCard";
+import { friends } from "@/data/friends";
+export default async function Home() {
+  const data = friends;
+  // console.log(data);
   return (
     <div className="  px-10  ">
       {/* header ---------- */}
@@ -14,7 +18,7 @@ export default function Home() {
           + Add a Friend
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-10 pb-15 border-b border-gray-300  ">
         <div className="bg-white p-10 text-center rounded-xl">
           <h1 className="text-3xl font-bold">10</h1>
           <p className="text-gray-500">Total Friends</p>
@@ -30,6 +34,17 @@ export default function Home() {
         <div className="bg-white p-10 text-center rounded-xl">
           <h1 className="text-3xl font-bold">19</h1>
           <p className="text-gray-500">Interactions This Month</p>
+        </div>
+      </div>
+      {/* data fetching div------ */}
+
+      <div className="mt-10">
+        <h1 className="text-2xl  font-bold"> Yours Friend</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {data.map((friend) => (
+            <FriendsCard friend={friend} key={friend.id}></FriendsCard>
+          ))}
         </div>
       </div>
     </div>
