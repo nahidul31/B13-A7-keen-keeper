@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/component/Navbar/Navbar";
 import Footer from "@/component/Footer/Footer";
 import AuthContext from "@/contexts/AuthContext";
+import { ToastContainer } from "react-toastify";
 
 const roboto = Roboto({
   weight: "400",
@@ -27,14 +28,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className={geistSans.variable}>
+      {/* ✅ FIX 1: full height fix */}
       <body
-        className={`${roboto.className} min-h-full flex flex-col bg-[#F8FAFC] antialiased`}
+        className={`${roboto.className} min-h-screen flex flex-col bg-[#F8FAFC] antialiased`}
       >
         <Navbar />
-        <main className="container mx-auto px-10">
+
+        {/* ✅ FIX 2: main flex-1 for sticky footer */}
+        <main className="container mx-auto px-4 md:px-10 flex-1">
           <AuthContext>{children}</AuthContext>
         </main>
-        <Footer className="mt-10"></Footer>
+
+        <Footer />
+
+        <ToastContainer />
       </body>
     </html>
   );

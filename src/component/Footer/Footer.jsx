@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#1a3d30] text-white mt-12">
+    <footer className="bg-[#1a3d30] text-white mt-7">
       {/* Top section */}
       <div className="flex flex-col items-center text-center py-12 px-6 gap-4">
         {/* Brand */}

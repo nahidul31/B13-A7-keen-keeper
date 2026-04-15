@@ -4,7 +4,7 @@ export default async function Home() {
   const data = friends;
   // console.log(data);
   return (
-    <div className="  px-10  ">
+    <div className="  sm:px-10  ">
       {/* header ---------- */}
       <div className="text-center mt-10 space-y-2">
         <h1 className="text-5xl font-bold">
@@ -41,7 +41,7 @@ export default async function Home() {
       <div className="mt-10">
         <h1 className="text-2xl  font-bold"> Yours Friend</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-7">
           {data.map((friend) => (
             <FriendsCard friend={friend} key={friend.id}></FriendsCard>
           ))}

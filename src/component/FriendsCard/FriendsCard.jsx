@@ -7,7 +7,7 @@ const FriendsCard = ({ friend }) => {
   //   const handleShowbtn = (id) => {};
   return (
     <Link href={`friendDetails/${id}`}>
-      <div className="card bg-white shadow-xl w-80 mx-auto rounded-2xl">
+      <div className="card bg-white shadow-xl  mx-auto rounded-2xl">
         <div className="card-body items-center text-center">
           {/* avatar */}
           <div className="avatar">

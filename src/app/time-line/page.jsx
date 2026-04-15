@@ -17,7 +17,7 @@ const TimeLinePage = () => {
         );
 
   return (
-    <div className="p-4">
+    <div className="sm:p-4 max-h-screen ">
       <h2 className="text-3xl font-bold mt-10">Time Line</h2>
 
       <div className="mt-5">
@@ -33,7 +33,7 @@ const TimeLinePage = () => {
         </select>
       </div>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-6 space-y-4 ">
         {filteredData?.length > 0 ? (
           filteredData.map((friend, idx) => (
             <div
@@ -61,8 +61,8 @@ const TimeLinePage = () => {
             </div>
           ))
         ) : (
-          <div className="mt-10">
-            <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-3xl px-10 py-12 text-center">
+          <div className="mt-10 ">
+            <div className=" backdrop-blur-md   rounded-3xl px-10 py-12 text-center">
               <p className="text-2xl font-bold text-gray-600">
                 No timeline data found
               </p>

@@ -4,6 +4,7 @@ import { friends } from "@/data/friends";
 import Image from "next/image";
 import { useContext } from "react";
 import { Context } from "@/contexts/AuthContext";
+import { toast } from "react-toastify";
 
 const FriendDetailsClient = () => {
   const { id } = useParams();
@@ -35,10 +36,11 @@ const FriendDetailsClient = () => {
 
     const newData = [...selectedFriend, operation];
     setSelectedFriend(newData);
+    toast.success(`${op.operation} to ${name} Successfully`);
   };
 
   return (
-    <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className=" pt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
       {/* left div */}
       <div className="card bg-base-100 shadow-xl p-6 items-center text-center">
         <div className="avatar">
