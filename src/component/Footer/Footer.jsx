@@ -1,9 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a3d30] text-white mt-7">
+    <footer className="bg-[#1a3d30] text-white mt-auto">
       <div className="flex flex-col items-center text-center py-12 px-6 gap-4">
         <h2 className="text-4xl md:text-5xl font-bold">KeenKeeper</h2>
 
@@ -15,32 +14,32 @@ export default function Footer() {
         <p className="text-sm font-semibold mt-2">Social Links</p>
 
         <div className="flex gap-3">
-          <Link href="#">
+          <a href="#">
             <Image
               src="/img/facebook.png"
               alt="facebook"
               width={40}
               height={40}
             />
-          </Link>
+          </a>
 
-          <Link href="#">
+          <a href="#">
             <Image
               src="/img/instagram.png"
               alt="instagram"
               width={40}
               height={40}
             />
-          </Link>
+          </a>
 
-          <Link href="#" className=" ">
+          <a href="#">
             <Image
               src="/img/twitter.png"
               alt="twitter"
               width={40}
               height={40}
             />
-          </Link>
+          </a>
         </div>
       </div>
 

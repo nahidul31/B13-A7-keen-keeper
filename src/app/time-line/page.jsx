@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 
 const TimeLinePage = () => {
   const { selectedFriend } = useContext(Context);
-  console.log(selectedFriend);
+
   const [filter, setFilter] = useState("all");
 
   const filteredData =
@@ -17,7 +17,7 @@ const TimeLinePage = () => {
         );
 
   return (
-    <div className="sm:p-4 max-h-screen ">
+    <div className="sm:p-4 min-h-screen pb-10">
       <h2 className="text-3xl font-bold mt-10">Time Line</h2>
 
       <div className="mt-5">
@@ -33,7 +33,7 @@ const TimeLinePage = () => {
         </select>
       </div>
 
-      <div className="mt-6 space-y-4 ">
+      <div className="mt-6 space-y-4">
         {filteredData?.length > 0 ? (
           filteredData.map((friend, idx) => (
             <div
@@ -61,16 +61,13 @@ const TimeLinePage = () => {
             </div>
           ))
         ) : (
-          <div className="mt-10 ">
-            <div className=" backdrop-blur-md   rounded-3xl px-10 py-12 text-center">
-              <p className="text-2xl font-bold text-gray-600">
-                No timeline data found
-              </p>
-
-              <p className="text-sm text-gray-400 mt-2">
-                Please add some activity to see your timeline
-              </p>
-            </div>
+          <div className="mt-10 text-center">
+            <p className="text-2xl font-bold text-gray-600">
+              No timeline data found
+            </p>
+            <p className="text-sm text-gray-400 mt-2">
+              Please add some activity to see your timeline
+            </p>
           </div>
         )}
       </div>
