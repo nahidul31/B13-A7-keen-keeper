@@ -1,9 +1,10 @@
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#1a3d30] text-white mt-7">
-      {/* Top section */}
       <div className="flex flex-col items-center text-center py-12 px-6 gap-4">
-        {/* Brand */}
         <h2 className="text-4xl md:text-5xl font-bold">KeenKeeper</h2>
 
         <p className="text-sm text-white/60 max-w-lg">
@@ -11,40 +12,40 @@ export default function Footer() {
           nurture the relationships that matter most.
         </p>
 
-        {/* Social */}
         <p className="text-sm font-semibold mt-2">Social Links</p>
 
         <div className="flex gap-3">
-          {/* Instagram placeholder */}
-          <a
-            href="#"
-            className="w-8 h-8 rounded-full bg-black hover:bg-black/70 flex items-center justify-center"
-          >
-            {/* img later */}
-          </a>
+          <Link href="#">
+            <Image
+              src="/img/facebook.png"
+              alt="facebook"
+              width={40}
+              height={40}
+            />
+          </Link>
 
-          {/* Facebook placeholder */}
-          <a
-            href="#"
-            className="w-8 h-8 rounded-full bg-black hover:bg-black/70 flex items-center justify-center"
-          >
-            {/* img later */}
-          </a>
+          <Link href="#">
+            <Image
+              src="/img/instagram.png"
+              alt="instagram"
+              width={40}
+              height={40}
+            />
+          </Link>
 
-          {/* Twitter/X placeholder */}
-          <a
-            href="#"
-            className="w-8 h-8 rounded-full bg-black hover:bg-black/70 flex items-center justify-center"
-          >
-            {/* img later */}
-          </a>
+          <Link href="#" className=" ">
+            <Image
+              src="/img/twitter.png"
+              alt="twitter"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>
       </div>
 
-      {/* Divider */}
       <div className="border-t border-white/10" />
 
-      {/* Bottom section */}
       <div className="flex flex-col md:flex-row items-center justify-between px-8 py-5 gap-3 text-xs text-white/50">
         <p>© 2026 KeenKeeper. All rights reserved.</p>
 
