@@ -7,7 +7,7 @@ It helps you track friends, manage interactions (Call, Text, Video), and view al
 
 ## 🚀 Live Demo
 
-## 🔗 https://github.com/nahidul31/B13-A7-keen-keeper
+## 🔗 https://b13-a7-keen-keeper-ten.vercel.app/
 
 ## 📌 About the Project
 
